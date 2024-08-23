@@ -1,0 +1,38 @@
+@import "../../styles/components.less";
+
+.root {
+  .is-blurred();
+  display: inline-block;
+  min-block-size: @field-height;
+  margin: 0;
+  padding-inline: 1rem;
+  padding-block: 0;
+  border: 1px solid var(--TextField__border-color);
+  color: var(--TextField__color);
+  background-color: var(--TextField__background-color);
+  font-family: var(--default-font-family);
+  font-size: 0.85rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: start;
+  text-transform: none;
+}
+
+.root:focus {
+  border: 1px solid var(--TextField--focused__border-color);
+  color: var(--TextField--focused__color);
+  background-color: var(--TextField--focused__background-color);
+  outline: none;
+}
+
+textarea.root {
+  min-block-size: 10em;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  resize: block;
+}
+
+.disabled {
+  .is-disabled();
+}
